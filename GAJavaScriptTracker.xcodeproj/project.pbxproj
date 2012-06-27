@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B41129571598A17E00FAC856 /* GAJavaScriptTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B431A386159893FC00277663 /* GAJavaScriptTracker.framework */; };
+		B411295A1598A18B00FAC856 /* GAJavaScriptTracker.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B431A386159893FC00277663 /* GAJavaScriptTracker.framework */; };
+		B411295B1598A1E200FAC856 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B431A388159893FC00277663 /* Cocoa.framework */; };
+		B411295D1598B19000FAC856 /* GAJavaScriptTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = B431A395159893FC00277663 /* GAJavaScriptTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B411295F1598B3E600FAC856 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B411295E1598B3E600FAC856 /* WebKit.framework */; };
+		B431A389159893FC00277663 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B431A388159893FC00277663 /* Cocoa.framework */; };
+		B431A397159893FC00277663 /* GAJavaScriptTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = B431A396159893FC00277663 /* GAJavaScriptTracker.m */; };
+		B431A3A31598946A00277663 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B431A39C1598946A00277663 /* Credits.rtf */; };
+		B431A3A51598946A00277663 /* GAJSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B431A3A01598946A00277663 /* GAJSAppDelegate.m */; };
+		B431A3A61598946A00277663 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B431A3A11598946A00277663 /* main.m */; };
+		B431A3A71598946A00277663 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B431A3A21598946A00277663 /* MainMenu.xib */; };
+		B431A3AE159897E000277663 /* GAJSWebViewEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B431A3AC159897E000277663 /* GAJSWebViewEngine.m */; };
+		B431A3B0159898F900277663 /* main.html in Resources */ = {isa = PBXBuildFile; fileRef = B431A3AF159898F900277663 /* main.html */; };
+		B43B53F31598CFF700E60671 /* ga.js in Resources */ = {isa = PBXBuildFile; fileRef = B43B53F21598CFF700E60671 /* ga.js */; };
+		B4671E52159925F600547D88 /* Appicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B4671E51159925F600547D88 /* Appicon.icns */; };
+		B4C5D7E815992F8400EFBFFE /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D7E615992F8400EFBFFE /* LICENSE.txt */; };
+		B4C5D7E915992F8400EFBFFE /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D7E615992F8400EFBFFE /* LICENSE.txt */; };
+		B4C5D7EA15992F8400EFBFFE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D7E715992F8400EFBFFE /* README.md */; };
+		B4C5D7EB15992F8400EFBFFE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4C5D7E715992F8400EFBFFE /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B41129591598A18500FAC856 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B411295A1598A18B00FAC856 /* GAJavaScriptTracker.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B411295E1598B3E600FAC856 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B431A3601598939500277663 /* GAJavaScriptTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAJavaScriptTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B431A386159893FC00277663 /* GAJavaScriptTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GAJavaScriptTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B431A388159893FC00277663 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B431A390159893FC00277663 /* GAJavaScriptTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GAJavaScriptTracker-Info.plist"; sourceTree = "<group>"; };
+		B431A394159893FC00277663 /* GAJavaScriptTracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GAJavaScriptTracker-Prefix.pch"; sourceTree = "<group>"; };
+		B431A395159893FC00277663 /* GAJavaScriptTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAJavaScriptTracker.h; sourceTree = "<group>"; };
+		B431A396159893FC00277663 /* GAJavaScriptTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAJavaScriptTracker.m; sourceTree = "<group>"; };
+		B431A39C1598946A00277663 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		B431A39D1598946A00277663 /* GAJavaScriptTracker-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GAJavaScriptTracker-Info.plist"; sourceTree = "<group>"; };
+		B431A39E1598946A00277663 /* GAJavaScriptTracker-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GAJavaScriptTracker-Prefix.pch"; sourceTree = "<group>"; };
+		B431A39F1598946A00277663 /* GAJSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAJSAppDelegate.h; sourceTree = "<group>"; };
+		B431A3A01598946A00277663 /* GAJSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAJSAppDelegate.m; sourceTree = "<group>"; };
+		B431A3A11598946A00277663 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B431A3A21598946A00277663 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		B431A3AB159897E000277663 /* GAJSWebViewEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAJSWebViewEngine.h; sourceTree = "<group>"; };
+		B431A3AC159897E000277663 /* GAJSWebViewEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAJSWebViewEngine.m; sourceTree = "<group>"; };
+		B431A3AF159898F900277663 /* main.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = main.html; sourceTree = "<group>"; };
+		B43B53F21598CFF700E60671 /* ga.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ga.js; sourceTree = "<group>"; };
+		B4671E51159925F600547D88 /* Appicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Appicon.icns; sourceTree = "<group>"; };
+		B4C5D7E615992F8400EFBFFE /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		B4C5D7E715992F8400EFBFFE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B431A35D1598939500277663 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B411295B1598A1E200FAC856 /* Cocoa.framework in Frameworks */,
+				B41129571598A17E00FAC856 /* GAJavaScriptTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B431A382159893FC00277663 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B431A389159893FC00277663 /* Cocoa.framework in Frameworks */,
+				B411295F1598B3E600FAC856 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B431A3551598939500277663 = {
+			isa = PBXGroup;
+			children = (
+				B431A39B1598946A00277663 /* GAJavaScriptTrackerApp */,
+				B431A38E159893FC00277663 /* GAJavaScriptTracker */,
+				B431A387159893FC00277663 /* Frameworks */,
+				B431A3611598939500277663 /* Products */,
+				B4C5D7E615992F8400EFBFFE /* LICENSE.txt */,
+				B4C5D7E715992F8400EFBFFE /* README.md */,
+			);
+			sourceTree = "<group>";
+		};
+		B431A3611598939500277663 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B431A3601598939500277663 /* GAJavaScriptTrackerApp.app */,
+				B431A386159893FC00277663 /* GAJavaScriptTracker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B431A387159893FC00277663 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B431A388159893FC00277663 /* Cocoa.framework */,
+				B411295E1598B3E600FAC856 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B431A38E159893FC00277663 /* GAJavaScriptTracker */ = {
+			isa = PBXGroup;
+			children = (
+				B431A38F159893FC00277663 /* Supporting Files */,
+				B431A395159893FC00277663 /* GAJavaScriptTracker.h */,
+				B431A396159893FC00277663 /* GAJavaScriptTracker.m */,
+				B431A3AB159897E000277663 /* GAJSWebViewEngine.h */,
+				B431A3AC159897E000277663 /* GAJSWebViewEngine.m */,
+				B431A3AF159898F900277663 /* main.html */,
+				B43B53F21598CFF700E60671 /* ga.js */,
+			);
+			path = GAJavaScriptTracker;
+			sourceTree = "<group>";
+		};
+		B431A38F159893FC00277663 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B431A390159893FC00277663 /* GAJavaScriptTracker-Info.plist */,
+				B431A394159893FC00277663 /* GAJavaScriptTracker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B431A39B1598946A00277663 /* GAJavaScriptTrackerApp */ = {
+			isa = PBXGroup;
+			children = (
+				B431A3A81598948E00277663 /* Supporting Files */,
+				B431A39F1598946A00277663 /* GAJSAppDelegate.h */,
+				B431A3A01598946A00277663 /* GAJSAppDelegate.m */,
+				B431A3A11598946A00277663 /* main.m */,
+				B431A3A21598946A00277663 /* MainMenu.xib */,
+				B431A39C1598946A00277663 /* Credits.rtf */,
+				B4671E51159925F600547D88 /* Appicon.icns */,
+			);
+			path = GAJavaScriptTrackerApp;
+			sourceTree = "<group>";
+		};
+		B431A3A81598948E00277663 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B431A39D1598946A00277663 /* GAJavaScriptTracker-Info.plist */,
+				B431A39E1598946A00277663 /* GAJavaScriptTracker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B431A383159893FC00277663 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B411295D1598B19000FAC856 /* GAJavaScriptTracker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B431A35F1598939500277663 /* GAJavaScriptTrackerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B431A37E1598939500277663 /* Build configuration list for PBXNativeTarget "GAJavaScriptTrackerApp" */;
+			buildPhases = (
+				B431A35C1598939500277663 /* Sources */,
+				B431A35D1598939500277663 /* Frameworks */,
+				B431A35E1598939500277663 /* Resources */,
+				B41129591598A18500FAC856 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GAJavaScriptTrackerApp;
+			productName = GAJavaScriptTracker;
+			productReference = B431A3601598939500277663 /* GAJavaScriptTrackerApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B431A385159893FC00277663 /* GAJavaScriptTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B431A398159893FC00277663 /* Build configuration list for PBXNativeTarget "GAJavaScriptTracker" */;
+			buildPhases = (
+				B431A381159893FC00277663 /* Sources */,
+				B431A382159893FC00277663 /* Frameworks */,
+				B431A383159893FC00277663 /* Headers */,
+				B431A384159893FC00277663 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GAJavaScriptTracker;
+			productName = GAJavaScriptTracker;
+			productReference = B431A386159893FC00277663 /* GAJavaScriptTracker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B431A3571598939500277663 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = QR;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = net.doo;
+			};
+			buildConfigurationList = B431A35A1598939500277663 /* Build configuration list for PBXProject "GAJavaScriptTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B431A3551598939500277663;
+			productRefGroup = B431A3611598939500277663 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B431A35F1598939500277663 /* GAJavaScriptTrackerApp */,
+				B431A385159893FC00277663 /* GAJavaScriptTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B431A35E1598939500277663 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B431A3A31598946A00277663 /* Credits.rtf in Resources */,
+				B431A3A71598946A00277663 /* MainMenu.xib in Resources */,
+				B4671E52159925F600547D88 /* Appicon.icns in Resources */,
+				B4C5D7E815992F8400EFBFFE /* LICENSE.txt in Resources */,
+				B4C5D7EA15992F8400EFBFFE /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B431A384159893FC00277663 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B431A3B0159898F900277663 /* main.html in Resources */,
+				B43B53F31598CFF700E60671 /* ga.js in Resources */,
+				B4C5D7E915992F8400EFBFFE /* LICENSE.txt in Resources */,
+				B4C5D7EB15992F8400EFBFFE /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B431A35C1598939500277663 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B431A3A51598946A00277663 /* GAJSAppDelegate.m in Sources */,
+				B431A3A61598946A00277663 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B431A381159893FC00277663 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B431A397159893FC00277663 /* GAJavaScriptTracker.m in Sources */,
+				B431A3AE159897E000277663 /* GAJSWebViewEngine.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B431A37C1598939500277663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.7;
+			};
+			name = Debug;
+		};
+		B431A37D1598939500277663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx10.7;
+			};
+			name = Release;
+		};
+		B431A37F1598939500277663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GAJavaScriptTrackerApp/GAJavaScriptTracker-Prefix.pch";
+				INFOPLIST_FILE = "GAJavaScriptTrackerApp/GAJavaScriptTracker-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B431A3801598939500277663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GAJavaScriptTrackerApp/GAJavaScriptTracker-Prefix.pch";
+				INFOPLIST_FILE = "GAJavaScriptTrackerApp/GAJavaScriptTracker-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B431A399159893FC00277663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GAJavaScriptTracker/GAJavaScriptTracker-Prefix.pch";
+				INFOPLIST_FILE = "GAJavaScriptTracker/GAJavaScriptTracker-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		B431A39A159893FC00277663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GAJavaScriptTracker/GAJavaScriptTracker-Prefix.pch";
+				INFOPLIST_FILE = "GAJavaScriptTracker/GAJavaScriptTracker-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B431A35A1598939500277663 /* Build configuration list for PBXProject "GAJavaScriptTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B431A37C1598939500277663 /* Debug */,
+				B431A37D1598939500277663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B431A37E1598939500277663 /* Build configuration list for PBXNativeTarget "GAJavaScriptTrackerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B431A37F1598939500277663 /* Debug */,
+				B431A3801598939500277663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B431A398159893FC00277663 /* Build configuration list for PBXNativeTarget "GAJavaScriptTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B431A399159893FC00277663 /* Debug */,
+				B431A39A159893FC00277663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B431A3571598939500277663 /* Project object */;
+}
