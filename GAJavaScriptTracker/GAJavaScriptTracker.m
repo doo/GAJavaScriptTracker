@@ -13,6 +13,14 @@
     GAJSWebViewEngine *_JSEngine;
 }
 
+@synthesize dryRun=_dryRun;
+@synthesize debug=_debug;
+@synthesize debugwebview=_debugwebview;
+@synthesize accountID=_accountID;
+@synthesize anonymizeIp=_anonymizeIp;
+@synthesize batchInterval=_batchInterval;
+@synthesize batchSize=_batchSize;
+
 // This method tries to find a tracker for the specified Google Analytics account ID (the string that begins with "UA-") in an internal List. If no tracker is up, it inits a new one :D
 + (id)trackerWithAccountID:(NSString *)accountID {
     static NSMutableDictionary *gaJavaScriptTrackerAvailableTrackers = nil;
@@ -26,7 +34,7 @@
     GAJavaScriptTracker *tracker = nil;
     if(!gaJavaScriptTrackerAvailableTrackers) {
         tracker = [[GAJavaScriptTracker alloc] initTrackerWithAccountID:accountID];
-        gaJavaScriptTrackerAvailableTrackers = [@{accountID: tracker} mutableCopy];
+        gaJavaScriptTrackerAvailableTrackers = [NSMutableDictionary dictionaryWithObject:tracker forKey:accountID];
     }
     else {
         tracker = [gaJavaScriptTrackerAvailableTrackers objectForKey:accountID];
@@ -77,7 +85,10 @@
         NSLog(@"[GAJST] Load html and set INITIAL_GA: %@", str);
 
     _JSEngine.htmlName = @"main";
-    _JSEngine.htmlVariables = @{@"INITIAL_GA": str};
+    _JSEngine.htmlVariables = [NSDictionary dictionaryWithObject:str forKey:@"INITIAL_GA"]; 
+    _JSEngine.debugwebview = _debugwebview;
+    if(self.debug)
+        [_JSEngine runJS:@"alert(_gaq)"];
     
     self.batchSize = _batchSize;
     self.batchInterval = _batchInterval;
