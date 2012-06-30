@@ -8,7 +8,7 @@
 
 #import "GAJSWebViewEngine.h"
 
-#define ELog(x, ...) /* NSLog(x,...) */
+#define ELog(x,...) /* NSLog */
 
 @interface GAJSWebViewEngine ()
 @property(nonatomic, readwrite) WebView *webView;
@@ -20,15 +20,27 @@
     NSMutableArray *_webViewPendingScripts;
 }
 
+@synthesize htmlName=_htmlName;
+@synthesize htmlVariables = _htmlVariables;
+@synthesize webView=_webView;
+@synthesize batchSize=_batchSize;
+@synthesize batchInterval=_batchInterval;
+@synthesize debugwebview=_debugwebview;
+
 - (WebView*)createWebView {
-    //alloc
-    WebView *webView = [[WebView alloc] initWithFrame:CGRectMake(0, 0, 10, 10) frameName:@"GAJSWebViewEngine" groupName:@"GAJS"];
+    WebView *webView; 
+    if(!_debugwebview) {
+        //alloc
+        webView = [[WebView alloc] initWithFrame:CGRectMake(0, 0, 10, 10) frameName:@"GAJSWebViewEngine" groupName:@"GAJS"];
+    }else{
+        webView = self.debugwebview;
+    }
 
     //set properties
+    webView.shouldUpdateWhileOffscreen = YES;
     webView.UIDelegate = self;
     webView.resourceLoadDelegate = self;
     webView.frameLoadDelegate = self;
-    [webView setCustomUserAgent: SAFARI_LIKE_USER_AGENT];
     
     //get file
     NSURL *file = [[NSBundle bundleForClass:self.class] URLForResource:_htmlName
@@ -61,7 +73,13 @@
     }
     
     //load
-    [[webView mainFrame] loadHTMLString:library baseURL:[file URLByDeletingLastPathComponent]];
+//    [[webView mainFrame] loadHTMLString:library baseURL:[file URLByDeletingLastPathComponent]];
+    NSString *d = NSTemporaryDirectory();
+    NSString *p = [[d stringByAppendingPathComponent:[[NSProcessInfo processInfo] globallyUniqueString]] stringByAppendingPathExtension:@"html"];
+    [library writeToFile:p atomically:NO encoding:NSUTF8StringEncoding error:nil];
+    id p2 = [[file.path stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"ga.js"];
+    [[NSFileManager defaultManager] copyItemAtPath:p2 toPath:[d stringByAppendingPathComponent:@"ga.js"] error:nil];
+    [[webView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:p]]];
     return webView;
 }
 
@@ -105,7 +123,7 @@
     if(_webviewLoaded) {
         for(id aJSString in _webViewPendingScripts) {
             //run it
-            NSLog(@"[JSC] Evaluate JS: %@", aJSString);
+            NSLog(@"[JSC] Evaluate JS: %@ %@ %@", aJSString, _webView.customUserAgent, _webView.applicationNameForUserAgent);
             NSString *result = [_webView stringByEvaluatingJavaScriptFromString:aJSString];
             if (!result) {
                 ELog(@"[JSC] No result returned");

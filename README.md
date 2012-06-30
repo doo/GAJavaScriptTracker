@@ -1,3 +1,6 @@
+##recent changes
+I fixed a crucial bug that prevented the framework from actually calling out to the google analytics server. This bug occurred on almost all 10.6 installations but not on 10.8 and was the result of a very slight change in the behaviour of cocoa's WebView class between OS releases which I mist.
+
 #about
 Objective-C Cocoa Wrapper for javascript google analytics tracking.</br><br/>
 Google has no mac SDK for google analytics tracking. It has an android SDK but no source. It has an iOS SDK but no source either. It's all precompiled for arm and I  didn't see any way to use it on the mac. So I was left with the Javascript Tracker available for embedding in any website and which can be used in any custom scenario.<br/></br>

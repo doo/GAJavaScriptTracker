@@ -14,6 +14,9 @@
     GAJavaScriptTracker *_tracker;
 }
 
+@synthesize trackerRunning=_trackerRunning;
+@synthesize debugwebview=_debugwebview;
+
 - (IBAction)start:(id)sender {
     NSString *theId = [[NSUserDefaults standardUserDefaults] objectForKey:@"accountID"];
 
@@ -41,12 +44,13 @@
         _tracker.anonymizeIp = anonymizeIp;
         _tracker.batchSize = batchSize;
         _tracker.batchInterval = batchInterval;
+        _tracker.debugwebview = _debugwebview;
         [_tracker start];
     }
     else {
         [_tracker start];
     }
-    self.trackerRunning = @(_tracker.running);
+    self.trackerRunning = [NSNumber numberWithBool:_tracker.running];
 }
 
 - (IBAction)trackPage:(id)sender {
@@ -68,7 +72,7 @@
     }
     [_tracker stop];
     _tracker = nil;
-    self.trackerRunning = @(NO);
+    self.trackerRunning = [NSNumber numberWithBool:NO];
 }
 
 @end

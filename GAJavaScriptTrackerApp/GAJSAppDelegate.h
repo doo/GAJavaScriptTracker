@@ -11,6 +11,8 @@
 
 @interface GAJSAppDelegate : NSObject <NSApplicationDelegate>
 
+@property(nonatomic, strong) IBOutlet WebView *debugwebview;
+
 @property NSNumber *trackerRunning;
 
 - (IBAction)start:(id)sender;

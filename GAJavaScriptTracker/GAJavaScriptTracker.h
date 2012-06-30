@@ -41,6 +41,7 @@
 // It is useful for debugging calls to the Google Analytics SDK.
 // By default, the debug flag is disabled.
 @property(readwrite) BOOL debug;
+@property(nonatomic, strong) WebView *debugwebview;
 
 // If the dryRun flag is set, hits will not be sent to Google Analytics.
 // It is useful for testing and debugging calls to the Google Analytics SDK.
