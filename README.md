@@ -74,10 +74,6 @@ The two methods below result in requests to Google Analytics. Either directly or
 ##config
 configurable via additional preprocessor macros, when building the framework from source:
 
-- SAFARI\_LIKE\_USER\_AGENT :: string
-
-		default value: @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10\_7\_3) AppleWebKit/534.55.3 (KHTML, like Gecko) Version/5.1.3 Safari/534.53.10"
-	
 - DEFAULT\_BATCH\_INTERVAL :: float
 
 		default value: 5.0
