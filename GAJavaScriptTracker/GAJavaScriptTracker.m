@@ -186,13 +186,13 @@
     
     id js;
     if(label && value>=0) {
-        js = [NSString stringWithFormat:@"_gaq.push(['%@', '%@', '%@', %ld])", category, action, label, value];
+        js = [NSString stringWithFormat:@"_gaq.push(['_trackEvent', '%@', '%@', '%@', %ld])", category, action, label, value];
     }
     else if(label) {
-        js = [NSString stringWithFormat:@"_gaq.push(['%@', '%@', '%@'])", category, action, label];
+        js = [NSString stringWithFormat:@"_gaq.push(['_trackEvent', '%@', '%@', '%@'])", category, action, label];
     }
     else {
-        js = [NSString stringWithFormat:@"_gaq.push(['%@', '%@'])", category, action];
+        js = [NSString stringWithFormat:@"_gaq.push(['_trackEvent', '%@', '%@'])", category, action];
     }
     return [self executeScript:js];
 }
