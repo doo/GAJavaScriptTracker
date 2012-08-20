@@ -9,6 +9,23 @@
 #import "GAJavaScriptTracker.h"
 #import "GAJSWebViewEngine.h"
 
+static NSString* GAEscapeNSString(NSString* value) {
+    if (!value) return nil;
+    const char *chars = [value UTF8String];
+    NSMutableString *escapedString = [NSMutableString string];
+    while (*chars) {
+        if (*chars == '\\') {
+            [escapedString appendString:@"\\\\"];
+        } else if (*chars == '\'') {
+            [escapedString appendString:@"\\'"];
+        } else {
+            [escapedString appendFormat:@"%c", *chars];
+        }
+        ++chars;
+    }
+    return escapedString;
+}
+
 @implementation GAJavaScriptTracker {
     GAJSWebViewEngine *_JSEngine;
 }
@@ -20,6 +37,7 @@
 @synthesize anonymizeIp=_anonymizeIp;
 @synthesize batchInterval=_batchInterval;
 @synthesize batchSize=_batchSize;
+
 
 // This method tries to find a tracker for the specified Google Analytics account ID (the string that begins with "UA-") in an internal List. If no tracker is up, it inits a new one :D
 + (id)trackerWithAccountID:(NSString *)accountID {
@@ -66,26 +84,26 @@
     
     if(self.debug)
         NSLog(@"[GAJST] allocate engine");
-
+    
     _JSEngine = [[GAJSWebViewEngine alloc] init];
     if(!_JSEngine) {
         @throw [NSException exceptionWithName:@"GAJSException"
                                        reason:@"Failed to load JavaScriptEngine"
                                      userInfo:nil];
     }
-
-
+    
+    
     id anonymize = @"_gaq.push(['_anonymizeIp']);";
     id str = [NSString stringWithFormat:@"var _gaq = _gaq || [];\n\
-    _gaq.push(['_setAccount', '%@']);\n\
-    _gaq.push(['_setDomainName', 'none']);\n\
-    %@", _accountID, _anonymizeIp ? anonymize : @""];
-
+              _gaq.push(['_setAccount', '%@']);\n\
+              _gaq.push(['_setDomainName', 'none']);\n\
+              %@", _accountID, _anonymizeIp ? anonymize : @""];
+    
     if(self.debug)
         NSLog(@"[GAJST] Load html and set INITIAL_GA: %@", str);
-
+    
     _JSEngine.htmlName = @"main";
-    _JSEngine.htmlVariables = [NSDictionary dictionaryWithObject:str forKey:@"INITIAL_GA"]; 
+    _JSEngine.htmlVariables = [NSDictionary dictionaryWithObject:str forKey:@"INITIAL_GA"];
     _JSEngine.debugwebview = _debugwebview;
     if(self.debug)
         [_JSEngine runJS:@"alert(_gaq)"];
@@ -98,11 +116,11 @@
 //stops this tracker
 -(void)stop {
     assert(_JSEngine);
-
+    
     if(self.debug)
         NSLog(@"[GAJST] flush the engine [if the webview is not loaded, this may loose a batch.]");
     [_JSEngine flushJS];
-
+    
     if(self.debug)
         NSLog(@"[GAJST] release engine");
     
@@ -151,14 +169,14 @@
 // character if pageURL doesn't start with one.
 - (BOOL)trackPageview:(NSString *)pageURL
             withError:(NSError **)error {
-
+    
     if(!pageURL.length) {
         @throw [NSException exceptionWithName:@"GAJSException"
                                        reason:@"No pageURL for trackPageview"
                                      userInfo:nil];
     }
     
-    id js = [NSString stringWithFormat:@"_gaq.push(['_trackPageview', '%@'])", pageURL];
+    id js = [NSString stringWithFormat:@"_gaq.push(['_trackPageview', '%@'])", GAEscapeNSString(pageURL)];
     return [self executeScript:js];
 }
 
@@ -172,7 +190,7 @@
              label:(NSString *)label
              value:(NSInteger)value
          withError:(NSError **)error {
-   
+    
     if(!category.length) {
         @throw [NSException exceptionWithName:@"GAJSException"
                                        reason:@"No category for trackEvent"
@@ -183,6 +201,9 @@
                                        reason:@"No action for trackEvent"
                                      userInfo:nil];
     }
+    category = GAEscapeNSString(category);
+    action = GAEscapeNSString(action);
+    label = GAEscapeNSString(label);
     
     id js;
     if(label && value>=0) {
