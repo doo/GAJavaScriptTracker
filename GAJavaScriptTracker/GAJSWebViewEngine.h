@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <WebKit/WebKit.h>
 
+//internal webview for the trackers. Could be used for other stuff too though, I guess :D
+
 @interface GAJSWebViewEngine : NSObject
 
 //webview for base html and JS Context
@@ -35,7 +37,6 @@
 //loads a JS file and executes it  when batch is full
 - (void)loadJSLibraryFromBundle:(NSString*)libraryName;
 - (void)loadJSLibraryFromURL:(NSURL*)url;
-
 
 //flushes all JS left
 - (void)flushJS;
