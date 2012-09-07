@@ -151,9 +151,6 @@
 }
 #pragma mark -
 
-/**
- Runs a string of JS in this instance's JS context and returns the result as a string
- */
 - (void)runJS:(NSString *)aJSString
 {
     if(!aJSString.length) {
@@ -173,9 +170,6 @@
     }
 }
 
-/**
- Loads a JS library file from the app's bundle (without the .js extension)
- */
 - (void)loadJSLibraryFromBundle:(NSString*)libraryName {
     //find in our bundle
     NSURL *file = [[NSBundle bundleForClass:self.class] URLForResource:libraryName
@@ -189,9 +183,6 @@
     [self loadJSLibraryFromURL:file];
 }
 
-/**
- Loads a JS library file from the specified url
- */
 - (void)loadJSLibraryFromURL:(NSURL*)url {
     //load content
     NSString *library = [NSString stringWithContentsOfURL:url
