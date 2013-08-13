@@ -349,6 +349,7 @@
 				INFOPLIST_FILE = "GAJavaScriptTrackerApp/GAJavaScriptTracker-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -361,6 +362,7 @@
 				INFOPLIST_FILE = "GAJavaScriptTrackerApp/GAJavaScriptTracker-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -376,6 +378,7 @@
 				INFOPLIST_FILE = "GAJavaScriptTracker/GAJavaScriptTracker-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -391,6 +394,7 @@
 				INFOPLIST_FILE = "GAJavaScriptTracker/GAJavaScriptTracker-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
