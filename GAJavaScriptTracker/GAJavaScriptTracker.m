@@ -83,7 +83,7 @@ static NSString* GAEscapeNSString(NSString* value) {
     assert(!_JSEngine);
     
     if(self.debug)
-        NSLog(@"[GAJST] allocate engine");
+        DLog(@"[GAJST] allocate engine");
     
     _JSEngine = [[GAJSWebViewEngine alloc] init];
     if(!_JSEngine) {
@@ -100,7 +100,7 @@ static NSString* GAEscapeNSString(NSString* value) {
               %@", _accountID, _anonymizeIp ? anonymize : @""];
     
     if(self.debug)
-        NSLog(@"[GAJST] Load html and set INITIAL_GA: %@", str);
+        DLog(@"[GAJST] Load html and set INITIAL_GA: %@", str);
     
     _JSEngine.htmlName = @"main";
     _JSEngine.htmlVariables = [NSDictionary dictionaryWithObject:str forKey:@"INITIAL_GA"];
@@ -118,11 +118,11 @@ static NSString* GAEscapeNSString(NSString* value) {
     assert(_JSEngine);
     
     if(self.debug)
-        NSLog(@"[GAJST] flush the engine [if the webview is not loaded, this may loose a batch.]");
+        DLog(@"[GAJST] flush the engine [if the webview is not loaded, this may loose a batch.]");
     [_JSEngine flushJS];
     
     if(self.debug)
-        NSLog(@"[GAJST] release engine");
+        DLog(@"[GAJST] release engine");
     
     _JSEngine = nil;
 }
@@ -130,7 +130,7 @@ static NSString* GAEscapeNSString(NSString* value) {
 //is it running?
 - (BOOL)isRunning {
     if(self.debug)
-        NSLog(@"[GAJST] checking for engine");
+        DLog(@"[GAJST] checking for engine");
     
     return (_JSEngine!=NULL);
 }
@@ -153,7 +153,7 @@ static NSString* GAEscapeNSString(NSString* value) {
 
 - (BOOL)executeScript:(NSString*)js {
     if(self.debug)
-        NSLog(@"[GAJST] execute %@", js);
+        DLog(@"[GAJST] execute %@", js);
     
     if(!self.dryRun) {
         [_JSEngine runJS:js];
