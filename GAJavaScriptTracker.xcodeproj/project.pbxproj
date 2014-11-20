@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B41129571598A17E00FAC856 /* GAJavaScriptTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B431A386159893FC00277663 /* GAJavaScriptTracker.framework */; };
-		B411295A1598A18B00FAC856 /* GAJavaScriptTracker.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B431A386159893FC00277663 /* GAJavaScriptTracker.framework */; };
+		B411295A1598A18B00FAC856 /* GAJavaScriptTracker.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B431A386159893FC00277663 /* GAJavaScriptTracker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B411295B1598A1E200FAC856 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B431A388159893FC00277663 /* Cocoa.framework */; };
 		B411295D1598B19000FAC856 /* GAJavaScriptTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = B431A395159893FC00277663 /* GAJavaScriptTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B411295F1598B3E600FAC856 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B411295E1598B3E600FAC856 /* WebKit.framework */; };
@@ -221,7 +221,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = QR;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = net.doo;
 			};
 			buildConfigurationList = B431A35A1598939500277663 /* Build configuration list for PBXProject "GAJavaScriptTracker" */;
