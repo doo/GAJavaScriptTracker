@@ -1,7 +1,7 @@
-##recent changes
+## recent changes
 I fixed a crucial bug that prevented the framework from actually calling out to the google analytics server. This bug occurred on almost all 10.6 installations but not on 10.8 and was the result of a very slight change in the behaviour of cocoa's WebView class between OS releases which I mist.
 
-#about
+# about
 Objective-C Cocoa Wrapper for javascript google analytics tracking.</br><br/>
 Google has no mac SDK for google analytics tracking. It has an android SDK but no source. It has an iOS SDK but no source either. It's all precompiled for arm and I  didn't see any way to use it on the mac. So I was left with the Javascript Tracker available for embedding in any website and which can be used in any custom scenario.<br/></br>
 The Framework -which I wrote for my work at <b>[@doo](twitter://@doo)</b>- provides the GAJavaScriptTracker objective-c class that wraps this javascript in an easy to use interface which tries to emulate the GATracker iOS Class from Google.<br/><br/>
@@ -9,12 +9,12 @@ It does so with the helper class GAJSWebViewEngine, a slightly modified GoogleAn
 NOTE: this class is not feature complete. It is specifically tailored to suit the needs for GA in the <b>[doo app](http://www.doo.net)</b> and is also intended as Demo of how to use a JS SDK from Cocoa.</br>
 (If Google ever decides to port their iOS SDK to the mac, im all for it :) till then this approach works fine.)
 
-##how to use
+## how to use
 The Framework is accompanied by a small demo app which you can use to test the available features of the tracker:<br/>
 
 --
 
-###The Tracker has the following Properties and methods
+### The Tracker has the following Properties and methods
 
 + +(id)trackerWithAccountID:(NSString *)accountID;
 
@@ -74,7 +74,7 @@ The two methods below result in requests to Google Analytics. Either directly or
 
 		Track an event. The category and action are required. The label and value are optional (specify nil for no label and -1 or any negative integer for no value). Returns YES on success or NO on error.
 
-##config
+## config
 configurable via additional preprocessor macros, when building the framework from source:
 
 - DEFAULT\_BATCH\_INTERVAL :: float
